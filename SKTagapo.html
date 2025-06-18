@@ -355,15 +355,18 @@
                 });
             });
 
-            // Initialize carousel
             const $carousel = $('.carousel');
             const instance = M.Carousel.init($carousel[0], {
                 fullWidth: false,
                 indicators: false,
-                duration: 200
+                duration: 200,
+                onCycleTo: function() {
+                    
+                    updateContent();
+                }
             });
 
-            // Function to update content with smooth transitions
+           
             function updateContent() {
                 const $activeItem = $carousel.find('.carousel-item.active');
                 const newBgImage = $activeItem.data('bg');
@@ -396,25 +399,23 @@
                 }, 400);
             }
 
-                    $('#nextSlideBtn').click(function () {
+            $('#nextSlideBtn').click(function() {
                 instance.next();
-                setTimeout(updateContent, 250); // Delay to wait for slide transition
-
             });
 
-                        $('#prevSlideBtn').click(function() {
+            $('#prevSlideBtn').click(function() {
                 instance.prev();
-                setTimeout(updateContent, 250);
+            });
+
+            // Add click event for carousel items
+            $('.carousel-item').click(function() {
+                const index = $(this).index();
+                instance.set(index);
             });
 
             // Initialize first slide
             updateContent();
-        });
-
-
-                   
-
-
+                    });
                  
 
                 </script>
