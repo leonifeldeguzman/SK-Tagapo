@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/images/background.png);
+    background-image: url(../images/background.png);
     min-height: 1200px;
     background-position: center;
     background-repeat: no-repeat;
