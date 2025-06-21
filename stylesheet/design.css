@@ -272,7 +272,7 @@
 }
 
 .container-hover:hover .arrow {
-    content: url("images/red\ arrow.png");
+    content: url("../images/red arrow.png");
     /* Path to your red arrow image */
     width: 80px;
     margin-left: 3px;
