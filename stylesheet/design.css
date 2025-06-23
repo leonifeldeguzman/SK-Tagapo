@@ -89,7 +89,7 @@
 .sk-gallery div {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     grid-gap: 25px;
     padding: 10px;
     flex: none;
